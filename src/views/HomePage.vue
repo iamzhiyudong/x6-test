@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main style="width: 100%; height: 100vh;">
     <GraphIndex />
   </main>
 </template>
