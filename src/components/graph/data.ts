@@ -2,40 +2,39 @@ export const data = {
   nodes: [
     {
       id: 'node1',
-      shape: 'rect',
-      x: 40,
-      y: 40,
-      width: 100,
-      height: 40,
-      label: 'hello',
-      attrs: {
-        // body 是选择器名称，选中的是 rect 元素
-        body: {
-          stroke: '#8f8f8f',
-          strokeWidth: 1,
-          fill: '#fff',
-          rx: 6,
-          ry: 6
-        }
+      shape: 'custom-vue-node',
+      x: 0,
+      y: 0,
+      width: 90,
+      height: 90,
+      ports: {
+        items: [
+          {
+            id: 'top',
+            group: 'top',
+          },
+          {
+            id: 'bottom',
+            group: 'bottom',
+          },
+          {
+            id: 'left',
+            group: 'left',
+          },
+          {
+            id: 'right',
+            group: 'right',
+          }
+        ]
       }
     },
     {
       id: 'node2',
-      shape: 'rect',
+      shape: 'custom-vue-node',
       x: 160,
       y: 180,
-      width: 100,
-      height: 40,
-      label: 'world',
-      attrs: {
-        body: {
-          stroke: '#8f8f8f',
-          strokeWidth: 1,
-          fill: '#fff',
-          rx: 6,
-          ry: 6
-        }
-      }
+      width: 90,
+      height: 90
     }
   ],
   edges: [

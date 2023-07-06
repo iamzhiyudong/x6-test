@@ -14,6 +14,8 @@
   "dependencies": {
     "@antv/x6": "^2.11.1",
     "@antv/x6-plugin-snapline": "^2.1.7",
+    "@antv/x6-vue-shape": "^2.0.11",
+    "vite-plugin-svg-icons": "^2.0.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },
