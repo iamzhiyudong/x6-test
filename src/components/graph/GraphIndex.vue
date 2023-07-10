@@ -8,9 +8,10 @@
   import { onMounted } from 'vue'
   import { data } from './data'
   import { Snapline } from '@antv/x6-plugin-snapline'
-  import { graphConfig } from './graph-config'
+  import { graphConfig } from './graph'
   import { getTeleport } from '@antv/x6-vue-shape'
   import { init } from './init'
+  import type { Options } from '@antv/x6/lib/graph/options'
 
   const TeleportContainer = getTeleport()
 
@@ -20,7 +21,7 @@
     const graph = new Graph({
       container: document.getElementById('container') as HTMLElement,
       ...graphConfig
-    })
+    } as Options.Manual)
 
     // 对齐线
     graph.use(
@@ -40,3 +41,4 @@
     height: 100%;
   }
 </style>
+./graph

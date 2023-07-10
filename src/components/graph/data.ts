@@ -1,47 +1,12 @@
+import { generateNode } from './node'
+
 export const data = {
-  nodes: [
-    {
-      id: 'node1',
-      shape: 'custom-vue-node',
-      x: 0,
-      y: 0,
-      width: 90,
-      height: 90,
-      ports: {
-        items: [
-          {
-            id: 'top',
-            group: 'top',
-          },
-          {
-            id: 'bottom',
-            group: 'bottom',
-          },
-          {
-            id: 'left',
-            group: 'left',
-          },
-          {
-            id: 'right',
-            group: 'right',
-          }
-        ]
-      }
-    },
-    {
-      id: 'node2',
-      shape: 'custom-vue-node',
-      x: 160,
-      y: 180,
-      width: 90,
-      height: 90
-    }
-  ],
+  nodes: [generateNode('node1', 0, 0), generateNode('node2', 160, 180)],
   edges: [
     {
       shape: 'edge',
-      source: 'node1',
-      target: 'node2',
+      source: { cell: 'node1', port: 'bottom' },
+      target: { cell: 'node2', port: 'top' },
       label: 'x6',
       attrs: {
         // line 是选择器名称，选中的边的 path 元素

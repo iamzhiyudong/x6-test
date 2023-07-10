@@ -1,6 +1,6 @@
 import { register } from '@antv/x6-vue-shape'
 import CustomNode from '@/components/graph/CustomNode.vue'
-import { portGroupConfig } from './port-config'
+import { portGroupConfig } from './port'
 
 const registerNode = () => {
   register({

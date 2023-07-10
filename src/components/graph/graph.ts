@@ -1,4 +1,6 @@
-export const graphConfig = {
+import { Options } from '@antv/x6/es/graph/options'
+
+export const graphConfig: Options.Manual = {
   autoResize: true, // 画布自适应
   // 画布配置
   background: {
@@ -19,5 +21,14 @@ export const graphConfig = {
         factor: 4 // 主次网格线间隔
       }
     ]
+  },
+  // 连线
+  connecting: {
+    snap: true,
+    allowBlank: false,
+    allowMulti: 'withPort',
+    allowLoop: false,
+    allowNode: false,
+    allowEdge: false
   }
 }

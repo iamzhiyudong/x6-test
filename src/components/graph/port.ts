@@ -11,7 +11,7 @@ const generatePortConfig = (position: PortPosition) => {
         strokeWidth: 1,
         fill: '#fff',
         style: {
-          visibility: 'hidden'
+          // visibility: 'hidden'
         }
       }
     }
@@ -23,6 +23,27 @@ export const portGroupConfig = {
     top: generatePortConfig('top'),
     bottom: generatePortConfig('bottom'),
     left: generatePortConfig('left'),
-    right: generatePortConfig('right'),
+    right: generatePortConfig('right')
   }
+}
+
+export const defaultNodePortItems = {
+  items: [
+    {
+      id: 'top',
+      group: 'top'
+    },
+    {
+      id: 'bottom',
+      group: 'bottom'
+    },
+    {
+      id: 'left',
+      group: 'left'
+    },
+    {
+      id: 'right',
+      group: 'right'
+    }
+  ]
 }
