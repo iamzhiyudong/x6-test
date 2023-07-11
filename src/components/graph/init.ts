@@ -1,10 +1,11 @@
-import { register } from '@antv/x6-vue-shape'
+import '@antv/x6-vue-shape'
 import CustomNode from '@/components/graph/CustomNode.vue'
 import { portGroupConfig } from './port'
+import { Graph } from '@antv/x6'
 
 const registerNode = () => {
-  register({
-    shape: 'custom-vue-node',
+  Graph.registerNode('vue-node', {
+    inherit: 'vue-shape',
     width: 100,
     height: 100,
     component: CustomNode,

@@ -32,4 +32,10 @@
       font-size: 12px;
     }
   }
+
+  .x6-node-selected {
+    .node {
+      border: 1px solid red;
+    }
+  }
 </style>

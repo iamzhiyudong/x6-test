@@ -1,19 +1,13 @@
 <template>
   <div id="container"></div>
-  <TeleportContainer />
 </template>
 
 <script lang="ts" setup>
   import { Graph } from '@antv/x6'
   import { onMounted } from 'vue'
   import { data } from './data'
-  import { Snapline } from '@antv/x6-plugin-snapline'
   import { graphConfig } from './graph'
-  import { getTeleport } from '@antv/x6-vue-shape'
   import { init } from './init'
-  import type { Options } from '@antv/x6/lib/graph/options'
-
-  const TeleportContainer = getTeleport()
 
   onMounted(() => {
     init()
@@ -21,14 +15,7 @@
     const graph = new Graph({
       container: document.getElementById('container') as HTMLElement,
       ...graphConfig
-    } as Options.Manual)
-
-    // 对齐线
-    graph.use(
-      new Snapline({
-        enabled: true
-      })
-    )
+    })
 
     graph.fromJSON(data)
     graph.centerContent()
