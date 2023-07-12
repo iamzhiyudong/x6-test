@@ -15,7 +15,7 @@
     const graph = new Graph({
       container: document.getElementById('container') as HTMLElement,
       ...graphConfig
-    })
+    } as any)
 
     graph.fromJSON(data)
     graph.centerContent()

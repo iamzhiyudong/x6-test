@@ -1,6 +1,6 @@
-import { Options as GraphOptions } from '@antv/x6/src/graph/options'
+import type { Options } from '@antv/x6/src/graph/options'
 
-export const graphConfig: GraphOptions.Manual = {
+export const graphConfig: Partial<Options.Manual> = {
   autoResize: true, // 画布自适应
   keyboard: true,
   clipboard: true,
